@@ -1,0 +1,266 @@
+<!--
+  templateType: "email"
+  isAvailableForNewContent: true
+-->
+{# START declare all modules #}
+
+
+{% text "headline_copy" export_to_template_context=True, overrideable=True, label = "Headline Copy", value="Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing Elit Sed Diam Nonummy Nibh" %}
+{% rich_text "main_copy" export_to_template_context=True, overrideable=True, html='', label='Main Copy', value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse orci neque, luctus et sem a, suscipit cursus nisl. Curabitur neque neque, volutpat sit amet libero ac, pharetra commodo risus. Quisque sapien nunc, convallis vitae eros sed, euismod placerat turpis.
+" %}
+{% linked_image "main_cta_image" export_to_template_context=True, overrideable=True, label="Main CTA Image", link="https://relittle.com/", src="https://f.hubspotusercontent40.net/hubfs/1919990/emails/visual-emails/RELittle_new-email-bottom-CTA.jpg", alt="Little's", width="100%" %}
+
+{# END MODULES #}
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+{% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+<style type="text/css">
+body {margin: 0; padding: 0; min-width: 100%!important; background:#eeeeee;}
+/*main content max-width*/
+h1{ font-family: Verdana, Geneva, sans-serif; font-size:24px; line-height:32px; color:#231f20; }
+#hs_cos_wrapper_top_sub_headline_copy { font-weight: normal; }
+#hs_cos_wrapper_second_sub_headline_copy { font-weight: normal; }
+p{ font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:22px; color:#231f20; font-weight:normal; }
+table{ border-collapse:collapse; border-spacing:0!important;}
+div{ padding:0px!important; }
+.content {width: 100%;} 
+.header { text-align:center; line-height:0;}
+.header img{ text-align:center; line-height:0; width:100%;}
+.main-copy{font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:22px; color:#000000; font-weight:normal; padding:0;}
+.footer{ background:#367c2b; font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:22px; color:#ffffff; font-weight:normal; }
+@media screen and (min-width: 641px) {
+}
+
+@media only screen and (max-width: 640px) {
+  .emailcta {
+    height:auto !important;
+    max-width: 640px !important;
+    width: 100% !important;
+  }
+	p#footer {
+    	text-align: center;
+	}
+}
+@media only screen and (max-width: 489px) {
+  .mobile-stack tr td {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  img.logo-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+}
+@media only screen and (max-width: 640px)  {
+	body[yahoo] .deviceWidth {width:440px!important; padding:0;}	
+}
+@media only screen and (max-width: 479px) {
+	body[yahoo] .deviceWidth {width:280px!important; padding:0;}	
+}
+/* iPhone 6+ */
+@media only screen and (min-device-width: 413px) and (max-device-width: 415px) { }
+/* iPhone 5 or less styles */
+@media only screen and (min-device-width: 319px) and (max-device-width: 321px) { }
+@media only screen and (max-width: 415px)  { Smaller screen styles here }
+
+</style>
+<!--[if gte mso 9]>
+<style type="text/css">
+/* Your Outlook-specific CSS goes here. */
+.content {width: 641px!important; max-width: 641px;} 
+</style>
+<![endif]-->
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>72</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->
+</head>
+<body yahoo bgcolor="#eeeeee" style="background-color: #eeeeee;">
+<!--[if (gte mso 9)|(IE)]>
+<table width="641" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#eeeeee">
+<tr>
+    <td>
+        <![endif]-->
+<table class="content" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width:780px; width: 100%; margin: 0 auto;">
+
+    {% if content.create_page %}
+    <tr>
+		<td valign="top" align="right" colspan="5">
+            <div style="font-size:9px; line-height:18px; font-family: Verdana, Geneva, sans-serif;">
+                Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.
+            </div>
+        </td>
+    </tr>
+    {% endif %}
+    <tr>
+        <td valign="top" colspan="5" width="780" height="60" style="height:60px; background-color: #367c2b;"></td>
+    </tr>
+    <tr>
+        <td valign="top" width="70" style="background-color: #367c2b;"></td>
+        <td valign="top" colspan="3" align="center" width="640" style="background-color:#ffffff;">
+            <a href="http://www.relittle.com/"><img class="logo-image" border="0" src="https://f.hubspotusercontent40.net/hubfs/1919990/emails/visual-emails/RELittle_new-email-logo.jpeg" alt="Little's" style="border:0;" />        
+            </a>
+        </td>
+        <td valign="top" width="70" style="background-color: #367c2b;"></td>
+    </tr>
+    <tr>
+        <td valign="top" width="70" height="15" style="height:15px; background-color: #367c2b;"></td>
+        <td valign="top" width="30" height="15" style="height:15px; background-color: #ffffff;"></td>
+        <td valign="top" width="580" height="15" style="height:15px; background-color: #ffffff;"></td>
+        <td valign="top" width="30" height="15" style="height:15px; background-color: #ffffff;"></td>
+        <td valign="top" width="70" height="15" style="height:15px; background-color: #367c2b;"></td>
+    </tr>
+   
+  {% if widget_data.headline_copy.value != '' %}
+    <tr>
+        <td valign="top" width="70" style="background-color: #367c2b;"></td>
+        <td valign="top" width="30" style="background-color: #ffffff;"></td>
+        <td valign="top" width="580" align="center" style="background-color:#ffffff;font-family: Verdana, Geneva, sans-serif; font-size:24px; line-height:32px; color:#231F20; font-weight: bold;">
+            <h1 style="font-family: Verdana, Geneva, sans-serif; font-size:24px; line-height:32px; color:#231F20; font-weight: bold; margin: 0; padding: 0;">
+                {{ widget_data.headline_copy.value }}
+            </h1>
+         </td>
+         <td valign="top" width="30" style="background-color: #ffffff;"></td>
+         <td valign="top" width="70" style="background-color: #367c2b;"></td>
+     </tr>
+      <tr>
+        <td valign="top" width="70" height="20" style="height:20px; background-color: #367c2b;"></td>
+        <td valign="top" width="30" height="20" style="height:20px; background-color: #ffffff;"></td>
+        <td valign="top" width="580" height="20" style="height:20px; background-color: #ffffff;"></td>
+        <td valign="top" width="30" height="20" style="height:20px; background-color: #ffffff;"></td>
+        <td valign="top" width="70" height="20" style="height:20px; background-color: #367c2b;"></td>
+    </tr>
+   {% endif %}
+  {% if widget_data.main_copy.value != '' %}
+    <tr>
+        <td valign="top" width="70" style="background-color: #367c2b;"></td>
+        <td valign="top" width="30" style="background-color: #ffffff;"></td>
+        <td class="main-copy" width="580" valign="top" style="font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:24px; color:#231f20; font-weight:normal;text-align: center; background-color: #ffffff;">
+          {% rich_text "main_copy" %}
+         </td>
+         <td valign="top" width="30" style="background-color: #ffffff;"></td>
+         <td valign="top" width="70" style="background-color: #367c2b;"></td>
+    </tr>
+     {% endif %}
+  
+  {% module "module_15959088612824" path="/Coded files/Custom/email/modules/Black Header", label="Black Header" %}
+  
+  {% module "module_15959093079809" path="/Coded files/Custom/email/modules/Two Column With CTA", label="Two Column With CTA" %}
+  
+  {% module "module_159595010335514" path="/Coded files/Custom/email/modules/Black Header - Packages", label="Black Header - Packages" %}
+  
+  {% module "module_159595005107211" path="/Coded files/Custom/email/modules/Two Column With CTA - Packages", label="Two Column With CTA - Packages" %}
+  
+    {% if widget_data.main_cta_image.value != '' || widget_data.main_cta_image.value != '' %}
+    <tr>
+        <td valign="top" width="70" style="background-color: #367c2b;"></td>
+        <td valign="top" class="mobile-stack" width="640" align="center" colspan="3" style="line-height: 0;">
+            <a href="{{ widget_data.main_cta_image.link }}">
+                <img border="0" src="{{ widget_data.main_cta_image.src }}" alt="{{ widget_data.main_cta_image.alt }}" style="border:0; width: 100%;" class="emailcta">        
+            </a>
+        </td>
+        <td valign="top" width="70" style="background-color: #367c2b;"></td>
+    </tr>
+  {% endif %}
+    <tr>
+        <td valign="top" width="70" style="background-color: #367c2b;"></td>
+        <td valign="top" colspan="3" width="640" style="background-color: #367c2b;">
+        	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="background-color: #367c2b;" class="footer-container">
+                <tr>
+                    <td valign="top" height="25" style="height:25px;"></td>
+                </tr>
+                <tr>
+                    <td valign="middle" align="center">
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+                            <tr>
+                              <td valign="top">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="mobile-stack">
+                                    <tr>
+                                      <td width="30%" valign="top">
+                                        <p style="font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:20px; text-align: left; color:#ffffff; font-weight:normal; padding:0 0 20px 0; margin:0;"><strong>HATBORO</strong><br><a href="https://www.google.com/maps/dir//Little's+Hatboro,+PA+19040/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c6afcababe4469:0xb9bf5a4b662a0431?sa=X&ved=2ahUKEwjRlLrKxIDkAhWurVkKHbyuA9oQ9RcwC3oECA8QEA" target="_blank" style="color: #ffffff; text-decoration: none;">335 S. York Road<br>Hatboro, PA 19040</a><br><img border="0" src="http://cdn2.hubspot.net/hubfs/1919990/Images/icons/phone.png" alt="Phone" style="border:0;"><a style="color: #ffffff; text-decoration: none;" href="tel:215-672-4100">215-672-4100</a></p>
+                                      </td>
+                                      <td width="30%" valign="top">
+                                        <p style="font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:22px; text-align: left; color:#ffffff; font-weight:normal; padding:0 0 20px 0; margin:0;"><strong>ZIEGLERVILLE/<br>PERKIOMENVILLE</strong><br><a href="https://www.google.com/maps/place/Little's/@40.2814112,-75.4827363,17.45z/data=!4m5!3m4!1s0x89c69b8001e5adfd:0x13f72e38b299327!8m2!3d40.281769!4d-75.48167" target="_blank" style="color: #ffffff; text-decoration: none;">{{ site_settings.company_street_address_1 }}{% if site_settings.company_street_address_2 %}, {{ site_settings.company_street_address_2 }}{% endif %}<br>{{ site_settings.company_city }}, {{ site_settings.company_state }} {{ site_settings.company_zip }}</a><br><img border="0" src="http://cdn2.hubspot.net/hubfs/1919990/Images/icons/phone.png" alt="Phone" style="border:0;"><a style="color: #ffffff; text-decoration: none;" href="tel:{{ site_settings.company_phone }}">{{ site_settings.company_phone }}</a></p>
+                                      </td>
+                                      <td width="30%" valign="top">
+                                        <p style="font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:20px; text-align: left; color:#ffffff; font-weight:normal; padding:0 0 20px 0; margin:0;"><strong>POTTSTOWN</strong><br><a href="https://www.google.com/maps/dir//Little's+Pottstown,+PA+19465/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c6899e55fc506f:0x21dba37ee03e04cc?sa=X&ved=2ahUKEwi-pq_pxIDkAhXjx1kKHXCpDxoQ9RcwC3oECA8QEA" target="_blank" style="color: #ffffff; text-decoration: none;">2555 Pottstown Pike<br>Pottstown, PA 19465</a><br><img border="0" src="http://cdn2.hubspot.net/hubfs/1919990/Images/icons/phone.png" alt="Phone" style="border:0;"><a style="color: #ffffff; text-decoration: none;" href="tel:484-985-8021">484-985-8021</a><br><span style="font-size:12px;">(Maintenance/Repair not<br>available at this location)</span></p>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td width="30%" valign="bottom">
+                                        <p style="font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:22px; text-align: left; color:#ffffff; font-weight:normal; padding:0; margin:0;"><strong>DOWNINGTOWN</strong><br><a href="https://www.google.com/maps/dir//Little's+Downingtown,+PA+19335/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c6f5ed51067e53:0xc58f0a5de35aef26?sa=X&ved=2ahUKEwjD6K2NxYDkAhVvplkKHd98AKAQ9RcwFHoECAwQEA" target="_blank" style="color: #ffffff; text-decoration: none;">221 Boot Road<br>Downingtown, PA 19335</a><br><img border="0" src="http://cdn2.hubspot.net/hubfs/1919990/Images/icons/phone.png" alt="Phone " style="border:0;"><a style="color: #ffffff; text-decoration: none;" href="tel:610-873-2001">610-873-2001</a></p>
+                                       </td>
+                                      <td width="30%" valign="bottom">
+                                        <p style="font-family: Verdana, Geneva, sans-serif; font-size:14px; line-height:20px; text-align: left; color:#ffffff; font-weight:normal; padding:0; margin:0;"><strong>SILVERDALE</strong><br><a href="https://www.google.com/maps/place/Little's/@40.3506004,-75.2696972,19.54z/data=!4m13!1m7!3m6!1s0x89c41e3d21d56f23:0x6c102bc59f252955!2s141+E+Main+St,+Silverdale,+PA+18962!3b1!8m2!3d40.3504482!4d-75.2695418!3m4!1s0x89c41f022bd3ded3:0x7f7a3f953352d043!8m2!3d40.3506156!4d-75.2695455" target="_blank" style="color: #ffffff; text-decoration: none;">141 E. Main Street<br>Silverdale, PA 18962</a><br><img border="0" src="http://cdn2.hubspot.net/hubfs/1919990/Images/icons/phone.png" alt="Phone " style="border:0;"><a style="color: #ffffff; text-decoration: none;" href="tel:215-257-5177">215-257-5177</a></p>
+                                      </td>
+                                      <td width="30%" valign="bottom">
+                                        <p><a href="https://www.facebook.com/LittlesJohnDeere/" target="_blank"><img src="https://f.hubspotusercontent40.net/hubfs/1919990/emails/email-fb-icon.png" border="0" width="23" height="23" style="padding:0; margin:0;" /></a><br><a href="http://www.relittle.com/" target="_blank" style="outline:0; border:0; text-decoration:none; color: #ffffff;"><span style="font-family: Verdana, Geneva, sans-serif; font-size:16px; line-height:32px; letter-spacing: 1px; text-align: left; color:#ffffff; font-weight:bold; padding:0; margin:0;">www.relittle.com</span></a></p>
+                                      </td>
+                                    </tr>
+                                  </table>    
+                              </td>
+                             </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" height="70" style="height:70px;"></td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top" width="70" style="background-color: #367c2b;"></td>
+    </tr>    
+    <tr>
+        <td valign="top" width="70" height="25" style="height:25px; background-color: #367c2b;"></td>
+        <td valign="top" width="30" style="background-color: #367c2b;"></td>
+        <td valign="top" width="580" height="25" style="height:25px; background-color: #367c2b;"></td>
+        <td valign="top" width="30" style="background-color: #367c2b;"></td>
+        <td valign="top" width="70" height="25" style="height:25px; background-color: #367c2b;"></td>
+    </tr>   
+    <tr>
+        <td valign="top" width="70"></td>
+        <td valign="top" width="640" align="center" colspan="3" style="font-family: Verdana, Geneva, sans-serif; font-size:10px; line-height:14px; color:#333333; font-weight:normal; text-align:center;">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" class="details-footer">
+                    <tr>
+                        <td valign="top" height="10" style="height:10px;"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="center" style="font-family: Verdana, Geneva, sans-serif; font-size:10px; line-height:14px; color:#333333; font-weight:normal; text-align:center;">
+                            You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
+                            <br/>
+                            Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
+                            <br/>
+                            <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" height="10" style="height:10px;"></td>
+                    </tr>
+            </table>
+        </td>
+        <td valign="top" width="70"></td>
+    </tr>
+    
+                                
+</table>
+        <!--[if (gte mso 9)|(IE)]>
+    </td>
+</tr>
+</table>
+<![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+    <style type="text/css" id="hs-inline-css">
+      /*<![CDATA[*/
+      /* everything in this style tag will be inlined onto matching elements */
+      body {
+        font-family: Arial, sans-serif;
+        color: #0C1D29;
+        background-color: #ECF0FF;
+        max-width: 780px;
+        margin: 0 auto;
+      }
+      body div {
+        max-width: 780px;
+        margin: 0 auto;
+      }
+      h1,h2,h3,h4 {
+        margin: 0;
+        padding: 0;
+      }
+      p, ul, li {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 22px;
+        color: #0C1D29;
+      }
+      #hs_cos_wrapper_email_template_logo_hs_logo_widget,
+      .widget-type-logo {
+        background: #ffffff;
+        background-color: #ffffff;
+        width: 630px;
+        height: 90px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .widget-type-logo img {
+        background: #ffffff;
+        background-color: #ffffff;
+        text-align: left;
+        margin: 20px 0;
+        padding-left: 5px;
+        width: 180px !important;
+        max-width: 180px !important;
+      }
+      #emailbody {
+        background-color: #ffffff;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+      #emailbody a {
+        color: #3B64FD;
+        text-decoration: none;
+      }
+      @media (max-width: 767px) {
+        .mobile-stack td {
+          width: 100% !important;
+          display: block !important;
+        }
+        .mobile-stack td img,
+        .mobile-stack img.speaker-image {
+          margin: 0 auto !important;
+          text-align: center !important;
+          display: block !important;
+        }
+        .speaker-bio {
+          padding-left:10px !important;
+          padding-right:10px !important;
+        }
+      }
+      /*]]>*/
+    </style>
+  </head>
+  <body>
+    <!-- Preview text (text which appears right after subject in certain email clients) -->
+    <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+    <!-- View as webpage link -->
+    {% if content.create_page %}
+    <div style="font-family: Arial, sans-serif;font-size:11px;color:#333333;text-align:center;">
+      Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.
+    </div>
+    {% endif %}
+    <table align="center" width="780" cellpadding="0" cellspacing="0" border="0" bgcolor="#ECF0FF" style="max-width:780px;">
+      <tr>
+        <td align="left" width="75" bgcolor="#ECF0FF">&nbsp;</td>
+        <td>
+          {% module "module_159312293884639" path="/Coded files/Custom/email/SQ2/email_modules/Email Hero", label="Email Hero" %}
+          {% module "module_15940609035529" path="/Coded files/Custom/email/SQ2/email_modules/Email - Body Copy", label="Email Body Copy" %}
+          {% module "module_159318888382937" path="/Coded files/Custom/email/SQ2/email_modules/Email Highlights", label="Email Highlights" %}
+          {% module "module_159319612463859" path="/Coded files/Custom/email/SQ2/email_modules/Email CTA", label="Email CTA" %}
+          {% module "module_1593201238624120" path="/Coded files/Custom/email/SQ2/email_modules/Email Events", label="Email Events" %}
+          {% module "module_159319934892795" path="/Coded files/Custom/email/SQ2/email_modules/Email Video", label="Email Video" %}
+          {% module "module_159344251376726" path="/Coded files/Custom/email/SQ2/email_modules/Email CTA 2", label="Email CTA 2" %}
+      </td>
+      <td align="left" width="75" bgcolor="#ECF0FF">&nbsp;</td>
+    </tr>
+  </table>
+          <!-- Office location information and unsubscribe links -->
+      <table align="center" bgcolor="#ECF0FF" width="780" cellpadding="0" cellspacing="0" border="0" style="max-width:780px;" id="footer">
+        <tr>
+          <td align="center" width="75" height="20" bgcolor="#ECF0FF" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+          <td align="center" width="630" height="20" bgcolor="#09268F" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+          <td align="center" width="75" height="20" bgcolor="#ECF0FF" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left" width="75" bgcolor="#ECF0FF" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+          <td align="left" width="625" bgcolor="#09268F">
+            <table>
+              <tr>
+                <td align="left" width="5" bgcolor="#09268F" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+                <td><a href="https://www.trumethods.com"><img src="https://f.hubspotusercontent00.net/hubfs/514953/Logo%20Images/TM%20Logos/email-template-footer-logo.png" alt="TruMethods"></a></td>
+              </tr>
+            </table>
+          </td>
+          <td align="left" width="75" bgcolor="#ECF0FF" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left" width="75" bgcolor="#ECF0FF" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+          <td>
+            <table align="left" width="630" bgcolor="#09268F" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td align="left" width="60" bgcolor="#09268F" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+                <td align="left" width="20" bgcolor="#09268F"><img src="https://f.hubspotusercontent00.net/hubfs/514953/images/icons/icon-web.png" alt="website" width="14" height="17" /></td>
+                <td align="left" bgcolor="#09268F" style="font-family: Arial, sans-serif;font-size:11px;color:#ffffff;text-align:left;"><a href="{{ site_settings.company_domain }}" style="color:#ffffff;text-decoration:none;"><strong>www.trumethods.com</strong></a></td>
+              </tr>
+              <tr>
+                <td align="left" width="60" bgcolor="#09268F" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+                <td align="left" width="20" bgcolor="#09268F"><img src="https://f.hubspotusercontent00.net/hubfs/514953/images/icons/icon-phone.png" alt="call" width="13" height="16" /></td>
+                <td align="left" bgcolor="#09268F" style="font-family: Arial, sans-serif;font-size:11px;color:#ffffff;text-align:left;"><a href="tel:{{ site_settings.company_phone }}" style="color:#ffffff;text-decoration:none;"><strong>{{ site_settings.company_phone }}</strong></a></td>
+              </tr>
+              <tr>
+                <td align="left" width="60" bgcolor="#09268F" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+                <td align="left" colspan="2" bgcolor="#09268F" style="padding-bottom:20px;">
+                  <a href="https://www.facebook.com/trumethods/"><img src="https://f.hubspotusercontent00.net/hubfs/514953/images/icons/email-social-facebook.png" alt="facebook" width="25" height="24" /></a> <a href="https://twitter.com/TruMethods"><img src="https://f.hubspotusercontent00.net/hubfs/514953/images/icons/email-social-twitter.png" alt="twitter" width="25" height="24" /></a> <a href="https://www.linkedin.com/company/trumethods-llc"><img src="https://f.hubspotusercontent00.net/hubfs/514953/images/icons/email-social-linkedin.png" alt="linkedin" width="24" height="24" /></a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td align="left" width="75" bgcolor="#ECF0FF" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+        </tr>
+      </table>
+      <table id="footer-unsub" align="center" width="780" cellpadding="0" cellspacing="0" border="0" bgcolor="#ECF0FF" style="max-width:780px;">
+        <tr><td align="left" height="20">&nbsp;</td></tr>
+        <tr>
+          <td width="630" style="font-family: Arial, sans-serif;font-size:11px;color:#0C1D29;text-align:center;">
+            <p style="font-family: Arial, sans-serif;font-size:11px;color:#0C1D29;text-align:center;">{{ site_settings.company_street_address_1 }}, {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }}, {{ site_settings.company_state }} {{ site_settings.company_zip }}</p>
+            <p style="font-family: Arial, sans-serif;font-size:11px;color:#0C1D29;text-align:center;">You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.<br />Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="color:#333;text-decoration:underline;">email preferences</a> to choose the types of emails you receive.
+              <br><a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}" style="color:#333;text-decoration:underline;">Unsubscribe from all future emails</a>.</p>
+          </td>
+        </tr>
+        <tr><td align="left" height="20">&nbsp;</td></tr>
+      </table>
+  </body>
+</html>

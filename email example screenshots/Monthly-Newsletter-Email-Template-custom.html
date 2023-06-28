@@ -1,0 +1,169 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+    <style type="text/css" id="hs-inline-css">
+      /*<![CDATA[*/
+      /* everything in this style tag will be inlined onto matching elements */
+      body {
+        font-family: Arial, sans-serif;
+        color: #0C1D29;
+        background-color: #ECF0FF;
+        max-width: 780px;
+        margin: 0 auto;
+      }
+      body div {
+        max-width: 780px;
+        margin: 0 auto;
+      }
+      h1,h2,h3,h4 {
+        margin: 0;
+        padding: 0;
+      }
+      p, ul, li {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 22px;
+        color: #0C1D29;
+      }
+      #hs_cos_wrapper_email_template_logo_hs_logo_widget,
+      .widget-type-logo {
+        background: #ffffff;
+        background-color: #ffffff;
+        width: 630px;
+        height: 90px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .widget-type-logo img {
+        background: #ffffff;
+        background-color: #ffffff;
+        text-align: left;
+        margin: 20px 0;
+        padding-left: 5px;
+        width: 180px !important;
+        max-width: 180px !important;
+      }
+      #emailbody {
+        background-color: #ffffff;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+      #emailbody a {
+        color: #3B64FD;
+        text-decoration: none;
+      }
+      @media (max-width: 767px) {
+        .mobile-stack td {
+          width: 100% !important;
+          display: block !important;
+        }
+        .mobile-stack td img,
+        .mobile-stack img.speaker-image {
+          margin: 0 auto !important;
+          text-align: center !important;
+          display: block !important;
+        }
+        .speaker-bio {
+          padding-left:10px !important;
+          padding-right:10px !important;
+        }
+      }
+      /*]]>*/
+    </style>
+  </head>
+  <body>
+    <!-- Preview text (text which appears right after subject in certain email clients) -->
+    <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+    <!-- View as webpage link -->
+    {% if content.create_page %}
+    <div style="font-family: Arial, sans-serif;font-size:11px;color:#333333;text-align:center;">
+      Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.
+    </div>
+    {% endif %}
+    <table align="center" width="780" cellpadding="0" cellspacing="0" border="0" bgcolor="#ECF0FF" style="max-width:780px;">
+      <tr>
+        <td align="left" width="75" bgcolor="#ECF0FF">&nbsp;</td>
+        <td>
+          {% module "module_159312293884639" path="/Coded files/Custom/email/SQ2/email_modules/Email Hero", label="Email Hero" %}
+          {% module "module_15940609035529" path="/Coded files/Custom/email/SQ2/email_modules/Email - Body Copy", label="Email Body Copy" %}
+          {% module "module_159318888382937" path="/Coded files/Custom/email/SQ2/email_modules/Email Highlights", label="Email Highlights" %}
+          {% module "module_159319612463859" path="/Coded files/Custom/email/SQ2/email_modules/Email CTA", label="Email CTA" %}
+          {% module "module_1593201238624120" path="/Coded files/Custom/email/SQ2/email_modules/Email Events", label="Email Events" %}
+          {% module "module_159319934892795" path="/Coded files/Custom/email/SQ2/email_modules/Email Video", label="Email Video" %}
+          {% module "module_159344251376726" path="/Coded files/Custom/email/SQ2/email_modules/Email CTA 2", label="Email CTA 2" %}
+      </td>
+      <td align="left" width="75" bgcolor="#ECF0FF">&nbsp;</td>
+    </tr>
+  </table>
+          <!-- Office location information and unsubscribe links -->
+      <table align="center" bgcolor="#ECF0FF" width="780" cellpadding="0" cellspacing="0" border="0" style="max-width:780px;" id="footer">
+        <tr>
+          <td align="left" width="75" bgcolor="#ECF0FF" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+         <td valign="top" colspan="12" width="630" class=" column" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left; padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444; width:700px; background-color:#333333; padding:30px 50px" align="left" bgcolor="#333333">
+          <table cellpadding="0" cellspacing="0" border="0" width="100%" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important">
+            <tbody><tr>
+              <td align="left" valign="top" class="bodyContent" width="100%" colspan="12" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444; font-family:sans-serif; font-size:15px; line-height:150%; text-align:left">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important">
+                  <tbody><tr>
+                    <td valign="top" colspan="2" width="16.666666666666664%" class=" column" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; width:16.666666666666664%; text-align:left; padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444" align="left">
+                      <div class="widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget">
+                        <div class="layout-widget-wrapper">
+                          <div id="hs_cos_wrapper_module_1589899140065214" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+                            <div id="hs_cos_wrapper_module_1589899140065214_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://cdn2.hubspot.net/hub/514953/hubfs/Images/Icons/TruMethods-shape.png?width=192&amp;upscale=true&amp;name=TruMethods-shape.png" class="hs-image-widget " style="vertical-align:bottom; -ms-interpolation-mode:bicubic; max-height:79px; max-width:96px; border-width:0px; border:0px" width="96" alt="TruMethods-shape" title="TruMethods-shape"></div>
+                          </div>
+                        </div><!--end layout-widget-wrapper -->
+                      </div><!--end widget-span -->
+                    </td>
+                    <td valign="top" colspan="5" width="41.66666666666667%" class=" column" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; width:41.66666666666667%; text-align:left; padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444" align="left">
+                      <div class="widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget">
+                        <div class="layout-widget-wrapper">
+                          <div id="hs_cos_wrapper_module_1589899205135280" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div id="hs_cos_wrapper_module_1589899205135280_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0 0 1em 15px"><span style="color: #ffffff;">{{ site_settings.company_name }}</span><br><span style="color: #ffffff;"> {{ site_settings.company_street_address_1 }} &nbsp;{{ site_settings.company_street_address_2 }}</span><br><span style="color: #ffffff;">{{ site_settings.company_city}} &nbsp;{{ site_settings.company_state }} &nbsp;&nbsp;{{ site_settings.company_zip }}</span><br><span style="color: #ffffff;"> <img src="https://cdn2.hubspot.net/hub/514953/hubfs/Images/Icons/phone.png?width=22&amp;upscale=true&amp;name=phone.png" alt="phone" width="11" style="-ms-interpolation-mode:bicubic; width:11px; max-width:11px; vertical-align:middle"> {{ site_settings.company_phone }}</span></p></div></div>
+                        </div><!--end layout-widget-wrapper -->
+                      </div><!--end widget-span -->
+                    </td>
+                    <td valign="top" colspan="5" width="41.66666666666667%" class=" column" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; width:41.66666666666667%; text-align:left; padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444" align="left">
+                      <div class="widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget">
+                        <div class="layout-widget-wrapper">
+                          <div id="hs_cos_wrapper_module_1589900114910608" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div id="hs_cos_wrapper_module_1589900114910608_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; width:130px; margin:0 auto" width="130">
+                            <tbody>
+                              <tr>
+                                <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; padding:20px 10px"><center><img src="https://cdn2.hubspot.net/hub/514953/hubfs/Images/Icons/facebook-link.png?width=74&amp;upscale=true&amp;name=facebook-link.png" alt="facebook-link" width="37" style="vertical-align:bottom; -ms-interpolation-mode:bicubic; width:37px; max-width:37px; display:block; margin:0px auto" align="center"></center></td>
+                                <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; padding:20px 10px"><center><img src="https://cdn2.hubspot.net/hub/514953/hubfs/Images/Icons/twitter-link.png?width=72&amp;upscale=true&amp;name=twitter-link.png" alt="twitter-link" width="36" style="vertical-align:bottom; -ms-interpolation-mode:bicubic; width:36px; max-width:36px; display:block; margin:0px auto" align="center"></center></td>
+                                <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; padding:20px 10px"><center><img src="https://cdn2.hubspot.net/hub/514953/hubfs/Images/Icons/linkedin-link.png?width=74&amp;upscale=true&amp;name=linkedin-link.png" alt="linkedin-link" width="37" style="vertical-align:bottom; -ms-interpolation-mode:bicubic; width:37px; max-width:37px; display:block; margin:0px auto" align="center"></center></td>
+                              </tr>
+                            </tbody>
+                            </table></div></div>
+                        </div><!--end layout-widget-wrapper -->
+                      </div><!--end widget-span -->
+                    </td>
+                    </tr>
+                  </tbody></table>
+              </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" class="bodyContent" width="100%" colspan="12" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444; font-family:sans-serif; font-size:15px; line-height:150%; text-align:left">
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important">
+                    <tbody><tr>
+                      <td valign="top" colspan="12" width="100.0%" class=" column" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left; padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444" align="left">
+
+                        <div class="widget-span widget-type-email_can_spam " style="font-size: 12px;" data-widget-type="email_can_spam">
+                          <p id="footer" style="margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:Geneva, Verdana, Arial, Helvetica, sans-serif; font-size:12px; line-height:1.8; display:block; text-align:left" align="left"><em><span style="color: #ffffff;">{{ site_settings.company_name }} &nbsp;&nbsp;{{ site_settings.company_street_address_1 }} &nbsp;{{ site_settings.company_street_address_2 }} &nbsp;{{ site_settings.company_city }}, &nbsp;{{ site_settings.company_state }} &nbsp;&nbsp;{{ site_settings.company_zip }} &nbsp;&nbsp;United States<br><br>You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}. Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="-ms-text-size-adjust:100%; -webkit-text-size-adjust:none; font-weight:normal; text-decoration:underline; color:#ffffff" data-hs-link-id="0" target="_blank">email preferences</a> to choose the types of emails you receive. <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}" style="-ms-text-size-adjust:100%; -webkit-text-size-adjust:none; font-weight:normal; text-decoration:underline; color:#ffffff" data-hs-link-id="0" target="_blank">Unsubscribe</a> from all future emails</span></em></p>
+                        </div><!--end widget-span -->
+                      </td>
+                      </tr>
+                    </tbody></table>
+                </td>
+              </tr>
+            </tbody></table>
+        </td>
+          <td align="left" width="75" bgcolor="#ECF0FF" style="font-size:1px; mso-line-height-rule: exactly; line-height:100%;">&nbsp;</td>
+        </tr>
+      </table>
+  </body>
+</html>
